@@ -8,6 +8,6 @@ FROM docker.elastic.co/logstash/logstash:${ELK_VERSION}
 RUN logstash-plugin install --preserve logstash-input-http
 RUN logstash-plugin install --preserve logstash-filter-geoip
 
-COPY ./plugins/logstash_filebeats.conf /usr/share/logstash/config
+# COPY ./plugins/logstash_filebeats.conf /usr/share/logstash/config
 COPY ./plugins/logstash_http.conf /usr/share/logstash/config
-COPY ./plugins/logstash_logger.conf /usr/share/logstash/config
+# COPY ./plugins/logstash_logger.conf /usr/share/logstash/config
