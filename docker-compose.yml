@@ -45,6 +45,7 @@ services:
       discovery.type: single-node
     networks:
       - elk
+    container_name: elasticsearch
 
   logstash:
     build:
@@ -61,7 +62,8 @@ services:
       - "5000:5000/udp"
       - "9600:9600"
     environment:
-      LS_JAVA_OPTS: -Xmx256m -Xms256m
+      LS_JAVA_OPTS: -Xms5120m -Xmx5120m
+      LS_HEAP_SIZE: 5g
       LOGSTASH_INTERNAL_PASSWORD: ${LOGSTASH_INTERNAL_PASSWORD:-}
     networks:
       - elk
