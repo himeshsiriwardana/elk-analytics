@@ -9,7 +9,7 @@ Run the latest version of the [Elastic stack][elk-stack] with Docker and Docker 
 It gives you the ability to analyze any data set by using the searching/aggregation capabilities of Elasticsearch and
 the visualization power of Kibana.
 
-![Animated demo](https://user-images.githubusercontent.com/3299086/140641708-cea70d17-cc04-459f-89d9-3fcb5c58bc35.gif)
+![Animated demo](https://user-images.githubusercontent.com/3299086/155972072-0c89d6db-707a-47a1-818b-5f976565f95a.gif)
 
 *:information_source: The Docker images backing this stack include [X-Pack][xpack] with [paid features][paid-features]
 enabled by default (see [How to disable paid features](#how-to-disable-paid-features) to disable them). **The [trial
@@ -33,7 +33,8 @@ Other available stack variants:
 
 We aim at providing the simplest possible entry into the Elastic stack for anybody who feels like experimenting with
 this powerful combo of technologies. This project's default configuration is purposely minimal and unopinionated. It
-does not rely on any external dependency or custom automation to get things up and running.
+does not rely on any external dependency, and uses as little custom automation as necessary to get things up and
+running.
 
 Instead, we believe in good documentation so that you can use this repository as a template, tweak it, and make it _your
 own_. [sherifabdlnaby/elastdocker][elastdocker] is one example among others of project that builds upon this idea.
@@ -74,8 +75,8 @@ own_. [sherifabdlnaby/elastdocker][elastdocker] is one example among others of p
 
 ### Host setup
 
-* [Docker Engine](https://docs.docker.com/install/) version **17.05** or newer
-* [Docker Compose](https://docs.docker.com/compose/install/) version **1.20.0** or newer
+* [Docker Engine](https://docs.docker.com/install/) version **18.06.0** or newer
+* [Docker Compose](https://docs.docker.com/compose/install/) version **1.26.0** or newer
 * 1.5 GB of RAM
 
 *:information_source: Especially on Linux, make sure your user has the [required permissions][linux-postinstall] to

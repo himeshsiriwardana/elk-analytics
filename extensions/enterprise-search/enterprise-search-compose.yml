@@ -1,11 +1,11 @@
-version: '3.2'
+version: '3.7'
 
 services:
   enterprise-search:
     build:
       context: extensions/enterprise-search/
       args:
-        ELK_VERSION: ${ELK_VERSION}
+        ELASTIC_VERSION: ${ELASTIC_VERSION}
     volumes:
       - ./extensions/enterprise-search/config/enterprise-search.yml:/usr/share/enterprise-search/config/enterprise-search.yml:ro,Z
     environment:
